@@ -1,49 +1,41 @@
-# History files
-.Rhistory
-.Rapp.history
+# System files
+.DS_Store
+.Spotlight-V100
+.Trashes
 
-# Session Data files
-.RData
-.RDataTmp
+# generated files
+*.o
+*.pyc
+*.so
+.ipynb_checkpoints/
+*.pkl
 
-# User-specific files
-.Ruserdata
+# Editor temporaries
+*.swn
+*.swo
+*.swp
+*~
 
-# Example code in package build process
-*-Ex.R
+# Installation files
+build/
+dist/
+*.egg-info/
 
-# Output files from R CMD build
-/*.tar.gz
+# Node state
+node_modules
+package-lock.json
 
-# Output files from R CMD check
-/*.Rcheck/
+lib/core/metadata.js
+lib/core/MetadataBlog.js
 
-# RStudio files
-.Rproj.user/
+website/translated_docs
+website/build/
+website/yarn.lock
+website/node_modules
+website/i18n/*
 
-# produced vignettes
-vignettes/*.html
-vignettes/*.pdf
-
-# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
-.httr-oauth
-
-# knitr and R markdown default cache directories
-*_cache/
-/cache/
-
-# Temporary files created by R markdown
-*.utf8.md
-*.knit.md
-
-# R Environment Variables
-.Renviron
-
-# pkgdown site
-docs/
-
-# translation temp files
-po/*~
-
-# RStudio Connect folder
-rsconnect/
+docs/translated_docs
+docs/build/
+docs/yarn.lock
+docs/node_modules
+docs/i18n/*
