@@ -5,7 +5,6 @@ holidays<=0.57
 matplotlib>=2.0.0
 numpy>=1.22
 pandas>=1.0.4
-packaging<22
 python-dateutil>=2.8.0
 scikit-learn>=0.24.2
 scipy>=1.10.0
