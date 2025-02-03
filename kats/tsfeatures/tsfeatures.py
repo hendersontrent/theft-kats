@@ -38,26 +38,30 @@ from statsmodels.stats.diagnostic import het_arch
 from statsmodels.tsa.seasonal import STL
 from statsmodels.tsa.stattools import acf, kpss, pacf
 
-try:
-    import llvmlite  # @manual
-    import numba  # @manual
+#try:
+#    import llvmlite  # @manual
+#    import numba  # @manual
 
     # TODO(sugak): don't use numba with incompatible version of LLVMlite.
     # This is a temporary workaround to facilitate Numpy upgrade. The import
     # would succeed but fail when used.
-    if numba.__version__ == "0.55.0" and llvmlite.__version__ == "0.42.0":
-        raise ImportError("Incompatible Numba and LLVMlite versions")
+#    if numba.__version__ == "0.55.0" and llvmlite.__version__ == "0.42.0":
+#        raise ImportError("Incompatible Numba and LLVMlite versions")
 
-    from numba import jit  # @manual
+#    from numba import jit  # @manual
 
-except ImportError:
-    logging.warning("numba is not installed. jit compilation of tsfeatures is disabled")
+#except ImportError:
+#    logging.warning("numba is not installed. jit compilation of tsfeatures is disabled")
 
-    def jit(**kwargs):  # type: ignore
-        def jit_decorator(func):  # type: ignore
-            return func
+#    def jit(**kwargs):  # type: ignore
+#        def jit_decorator(func):  # type: ignore
+#            return func
 
-        return jit_decorator
+#        return jit_decorator
+
+def jit_decorator(func):  # type: ignore
+    return func
+return jit_decorator
 
 
 from kats.compat.statsmodels import ExponentialSmoothing
