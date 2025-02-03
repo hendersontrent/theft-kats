@@ -53,15 +53,10 @@ from statsmodels.tsa.stattools import acf, kpss, pacf
 #except ImportError:
 #    logging.warning("numba is not installed. jit compilation of tsfeatures is disabled")
 
-#    def jit(**kwargs):  # type: ignore
-#        def jit_decorator(func):  # type: ignore
-#            return func
-
-#        return jit_decorator
-
-def jit_decorator(func):  # type: ignore
-    return func
-
+def jit(**kwargs):  # type: ignore
+    def jit_decorator(func):  # type: ignore
+        return func
+    return jit_decorator
 
 from kats.compat.statsmodels import ExponentialSmoothing
 from kats.consts import TimeSeriesData
