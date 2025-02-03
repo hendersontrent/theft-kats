@@ -61,7 +61,6 @@ from statsmodels.tsa.stattools import acf, kpss, pacf
 
 def jit_decorator(func):  # type: ignore
     return func
-return jit_decorator
 
 
 from kats.compat.statsmodels import ExponentialSmoothing
